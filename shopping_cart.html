@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Online Restaurant || Home pages</title>
+
+        <!-- google fonts  'poppins' -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+        <!-- bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="d-flex flex-column" style="min-height: 100vh;">
+        <div id="preloader">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand navbar-light bg-white py-4">
+                <div class="container">
+                    <a class="navbar_brand" href="index.html">
+                        <h2>OnRs</h2>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex mx-auto w-75 navbar_search" id="navSearch">
+                            <input class="form-control" type="search" placeholder="Search in our restaurant" aria-label="Search" id="nameSearch" />
+                            <button class="btn btn-blue" type="submit" onclick="searchItem()"><i class="bi bi-search"></i></button>
+                            <a href="/shopping_cart.html" title="Cart" class="shopping_cart d-inline-block position-relative my-auto ms-4">
+                                <i class="bi bi-cart3"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartItem"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="container my-5">
+            <h5 class="text-center text-success mb-2">All price per pice only <span id="perPrice"></span> taka</h5>
+            <hr class="mb-5" />
+            <section id="cartItemsContainer"></section>
+
+            <section id="errorMess"></section>
+
+            <div class="d-flex">
+                <button id="checkOut" class="btn btn-success ms-auto d-none">Check out</button>
+            </div>
+
+            <section id="balance" class="d-none">
+                <div class="balanceInner">
+                    <div class="d-flex px-2 justify-content-between">
+                        <h5>Subtotal</h5>
+                        <h5 id="subtotalValue">00</h5>
+                    </div>
+                    <div class="d-flex px-2 my-4 justify-content-between">
+                        <h5>Tax</h5>
+                        <h5 id="taxValue">00</h5>
+                    </div>
+                    <hr />
+                    <div class="d-flex px-2 justify-content-between">
+                        <h5>Total</h5>
+                        <h5 id="totalValue">00</h5>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex">
+                    <button class="ms-auto btn btn-success" id="confirmOrder">Confirm</button>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="mt-auto">
+            <p class="py-5 text-center m-0">Made by Suronjit in 2022</p>
+        </footer>
+
+        <!-- custom js -->
+        <script src="js/shoppingCart.js"></script>
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
